@@ -1,0 +1,46 @@
+/* CSS file placeholder. */
+*{
+  color:white;
+}
+
+body{
+  background-color:#967D62;
+}
+
+.centre{
+  text-align:center;
+}
+
+.titleButton{
+  color:black;
+  font-size:1.5em;
+  width:80%;
+  padding:0.5em 2em;
+  margin-top:1.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+form audio{
+  padding-left: 45px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#optChangeNumQuest{
+  color:black;
+}
+
+#changeDiv{
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+input{
+  color:black;
+}
+
+#buttChangeNum{
+  color:black;
+}

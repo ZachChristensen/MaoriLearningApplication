@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Portfolio",
+  "short_name": "Portfolio",
+  "description": "Maori Learning Application",
+  "version": "0.0.1",
+  "minimum_chrome_version": "38",
+  "permissions": ["storage"],
+
+  "icons": {
+    "16": "assets/Marae-icon 16.png",
+    "128": "assets/Marae-icon.png"
+  },
+
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  }
+}
