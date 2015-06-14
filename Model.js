@@ -1,4 +1,4 @@
-/*global alert, myapp, window, document, chrome*/
+/*global alert, myapp, window, document, chrome, console*/
 var myapp = {};
 
 myapp.model = function (view, controller) {
@@ -89,6 +89,9 @@ myapp.model = function (view, controller) {
                 wordNum3 = Math.round(Math.random() * (theApp.wordsLength()));
 
             this.audio = theApp.allAudio[theApp.returnQuestionNo()];
+            console.log(theApp.returnQuestionNo());
+            console.log(this.audio);
+            console.log(theApp.allAudio);
             this.choices.push(new Choice(this.audio.word, true));
             this.choices.push(new Choice(theApp.words[wordNum1], false));
             this.choices.push(new Choice(theApp.words[wordNum2], false));
@@ -105,6 +108,7 @@ myapp.model = function (view, controller) {
         Quiz = function () {
             var i;
             this.questions = [];
+            theApp.resetQuestionNo();
             for (i = 0; i < theApp.quizLength; i += 1) {
                 this.questions.push(new Question());
                 theApp.incrQuestionNo();
@@ -204,7 +208,7 @@ myapp.model = function (view, controller) {
         theApp.allAudio.push({word: "Wood pigeon", source: "audio/wood-pigeon.wav"});
 
         theApp.words = [];
-        theApp.words.push("Cow", "Friend", "Shake", "Dream", "Dog", "Honor", "Ape", "Liquid", "Birthday", "Flavor", "Roast", "Food", "Family", "Confirm", "Rich", "Chemical", "Export", "Arson", "Hate", "City", "Sheep", "Clam", "Harvest", "Dead", "Grasp", "Evolve", "Germ", "Bug", "Rare", "Frog", "Honest", "Fluffy", "Ears", "Computer", "Raw", "Luck", "Kakapo", "Hero", "Demon", "Ivy", "Hunter");
+        theApp.words.push("Cow", "Happy", "Design", "Dirt", "Eyes", "Log", "Level", "Class", "Ice", "Steam", "Distant", "Run", "Sprint", "Child", "Time", "Nuclear", "Burn", "Holy", "Friend", "Shake", "Dream", "Dog", "Honor", "Ape", "Liquid", "Birthday", "Flavor", "Roast", "Food", "Family", "Confirm", "Rich", "Chemical", "Export", "Arson", "Hate", "City", "Sheep", "Clam", "Harvest", "Dead", "Grasp", "Evolve", "Germ", "Bug", "Rare", "Frog", "Honest", "Fluffy", "Ears", "Computer", "Raw", "Luck", "Kakapo", "Hero", "Demon", "Ivy", "Hunter");
     };
 
     this.getTheApp = function () {
